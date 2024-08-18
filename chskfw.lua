@@ -32,65 +32,7 @@ local Rage = Window:CreateTab("Rage", 18395514790) -- Title, Image
 
 -- // RAAAAAGE!
 local RageLabel2 = Rage:CreateLabel("RBXSystem Related")
-local NP2C = Rage:CreateButton({
-    Name = "Chat - Become an NPC (New RBXSystem)",
-    Callback = function()
-        getgenv().hurtmessages = {
-            "That hurt!",
-            "Watch where you're swinging!",
-            "Ow! That's gonna leave a mark!",
-            "Stop attacking me!",
-            "I'm not feeling so good...",
-            "Is that all you've got?",
-            "Can't catch a break!",
-            "That was a cheap shot!",
-            "You'll regret that!"
-         }
-        if player.Character then
-            local humanoid = player.Character:WaitForChild("Humanoid")
-            local previousHealth = humanoid.Health
-        
-            humanoid.Changed:Connect(function()
-                if humanoid.Health < previousHealth then
-                    local randomIndex = math.random(1, #getgenv().hurtmessages)
-                    local message = getgenv().hurtmessages[randomIndex]
-                    game.TextChatService.TextChannels.RBXGeneral:SendAsync(message)
-                end
-                
-                previousHealth = humanoid.Health
-            end)
-        end
-        player.CharacterAdded:Connect(function(char)
-            local humanoid = char:WaitForChild("Humanoid")
-            local previousHealth = humanoid.Health
-        
-            humanoid.Changed:Connect(function()
-                if humanoid.Health < previousHealth then
-                    local randomIndex = math.random(1, #getgenv().hurtmessages)
-                    local message = getgenv().hurtmessages[randomIndex]
-                    game.TextChatService.TextChannels.RBXGeneral:SendAsync(message)
-                end
-                
-                previousHealth = humanoid.Health
-            end)
-        end)
 
-        Rayfield:Notify({
-            Title = "NPC",
-            Content = "._.",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
-    end,
-})
 local ChatSpammer2 = Rage:CreateToggle({ Name = "Chat - Spammer (Newer RBXSystem)", CurrentValue = false, Flag = "C432532S",  Callback = function(ChatSpammerToggle2) 
     CurrentValue = ChatSpammerToggle2
 
