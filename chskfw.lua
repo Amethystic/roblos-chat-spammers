@@ -9,13 +9,13 @@ end
 
 -- ... and so on
 getgenv().IsSolara = function() return true end
-getgenv().SecureMode = false
+getgenv().SecureMode = true
 -- // ...
 
 -- // Init Requirement \\ --
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local cheatname = "Meowijuana.lol | ChatSpammer"
-local version = "v0.0.0.1"
+local version = "v0.0.0.2"
 -- // ...
 
 -- // Init Window \\ --
