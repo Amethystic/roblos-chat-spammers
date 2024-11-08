@@ -13,7 +13,7 @@ getgenv().SecureMode = false
 -- // ...
 
 -- // Init Requirement \\ --
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/refs/heads/main/source'))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local cheatname = "Meowijuana.lol | ChatSpammer"
 local version = "v0.0.0.1"
 -- // ...
